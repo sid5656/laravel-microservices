@@ -25,6 +25,7 @@ This project demonstrates how to build a **microservices-based system** using **
 ---
 
 ## 🛠 Folder Structure
+```
 laravel-microservices/
 ├── user-service/ # Handles auth, tokens, user data
 ├── project-service/ # CRUD operations for projects
@@ -142,21 +143,6 @@ project-service validates token with user-service.
 
 After project is created, it sends data to notification-service.
 
-🔒 Authentication Flow
-mermaid
-Copy
-Edit
-sequenceDiagram
-    actor Client
-    participant UserService as user-service
-    participant ProjectService as project-service
 
-    Client->>UserService: POST /api/login (email, password)
-    UserService-->>Client: token
-
-    Client->>ProjectService: POST /api/projects (with Bearer token)
-    ProjectService->>UserService: GET /api/user (with token)
-    UserService-->>ProjectService: user info
-    ProjectService-->>Client: project created
 
 
