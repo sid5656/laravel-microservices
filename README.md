@@ -32,7 +32,7 @@ laravel-microservices/
 ├── notification-service/ # Sends email notifications
 └── README.md
 
-
+```
 ---
 
 ## ⚙️ Service Setup Instructions
